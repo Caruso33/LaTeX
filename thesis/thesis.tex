@@ -1,0 +1,92 @@
+% https://www.uni-ulm.de/fileadmin/website_uni_ulm/mawi.inst.160/pdf_dokumente/LaTeX.pdf
+
+%
+% preamble
+%
+\documentclass[12pt,titlepage]{article}
+
+\usepackage[ngerman]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{color}
+\usepackage[a4paper,lmargin={4cm},rmargin={2cm},tmargin={2.5cm},bmargin = {2.5cm}]{geometry}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{booktabs}
+
+\usepackage[backend=bibtex]{biblatex}
+\addbibresource{literatur.bib}
+
+\linespread{1.25}
+\def\theequation{\thesection.\arabic{equation}}
+
+%
+% doc start
+%
+\begin{document}
+
+
+\pagenumbering{Roman}
+
+\begin{titlepage}
+    \title{Die Leiden des jungen Werthers}
+    \date{1774}
+    \author{Johann Wolfgang von Goethe}
+    \maketitle
+\end{titlepage}
+
+\tableofcontents
+\newpage
+
+\pagenumbering{arabic}
+
+\section{Section}
+\subsection{Subsection}
+\subsubsection{Subsubsection}
+
+\begin{equation}
+    E = mc^2
+\end{equation}
+
+$E = mc^2$ ist die zentrale Gleichung der Relativitätstheorie.
+
+In expected utility theory, the utilities of outcomes are weighted by their probabilities\footfullcite[vgl.][]{kahneman}
+
+\newpage
+\begin{figure}
+	\centering\includegraphics[width=0.25\textwidth]{eistüte.jpg}
+	\caption[Eistüte]{Eistüte,\\ Quelle: eigene Darstellung}
+\end{figure}
+
+
+\begin{table}
+\centering
+\begin{tabular}{lcr} 
+\midrule 
+Land & Hauptstadt & Fläche
+\\ \toprule 
+Deutschland & Berlin & 357.111 $\mbox{km}^2$\\
+Frankreich & Paris & 674.843 $\mbox{km}^2$\\ 
+\midrule 
+\end{tabular}
+
+\caption{Staatsfläche,\\ Quelle: Wikipedia}
+\end{table}
+
+%
+% appendix
+%
+\newpage
+\addcontentsline{toc}{section}{Literatur}
+\printbibliography
+
+\newpage
+\addcontentsline{toc}{section}{Abbildungsverzeichnis}
+\listoffigures
+
+\newpage
+\addcontentsline{toc}{section}{Tabellenverzeichnis}
+\listoftables
+
+\end{document}
